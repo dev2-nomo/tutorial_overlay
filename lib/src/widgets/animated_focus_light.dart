@@ -388,6 +388,11 @@ class AnimatedPulseFocusLightState extends AnimatedFocusLightState {
 
                           /// Essential for collecting [TapDownDetails]. Do not make [null]
                           : () {},
+                      onLongPress: _targetFocus.enableTargetTab
+                          ? () => _tapHandler(targetTap: true)
+
+                          /// Essential for collecting [TapDownDetails]. Do not make [null]
+                          : () {},
                       onTapDown: _tapHandlerForPosition,
                       child: Container(
                         color: Colors.transparent,

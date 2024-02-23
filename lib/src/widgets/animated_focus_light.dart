@@ -272,6 +272,11 @@ class AnimatedStaticFocusLightState extends AnimatedFocusLightState {
 
                       /// Essential for collecting [TapDownDetails]. Do not make [null]
                       : () {},
+                  onLongPress: _targetFocus.enableTargetTab
+                      ? () => _tapHandler(targetTap: true)
+
+                      /// Essential for collecting [TapDownDetails]. Do not make [null]
+                      : () {},
                   child: Container(
                     color: Colors.transparent,
                     width: width,
